@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptHub — 500+ AI Промптов для Профессий | Каталог 2026</title>
+    <meta name="description" content="Каталог из 500+ готовых AI промптов для SMM, юристов, риелторов, программистов, копирайтеров и маркетологов. Копируй — вставляй — получай результат.">
+    <meta name="keywords" content="AI промпты, ChatGPT промпты, промпты для работы, AI для бизнеса, автоматизация, SMM промпты, юридические промпты">
+    <meta name="author" content="PromptHub">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="PromptHub — 500+ AI Промптов для Профессий">
+    <meta property="og:description" content="Готовые промпты для ChatGPT, Claude и Gemini. Экономь до 10 часов в неделю.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prompthub.example.com">
+    <meta property="og:image" content="https://prompthub.example.com/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PromptHub — 500+ AI Промптов">
+    <meta name="twitter:description" content="Готовые промпты для любой профессии. Копируй и получай результат.">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PromptHub",
+        "url": "https://prompthub.example.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://prompthub.example.com/?search={search_term}",
+            "query-input": "required name=search_term"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: rgba(255,255,255,0.03);
+            --bg-glass: rgba(255,255,255,0.05);
+            --border-glass: rgba(255,255,255,0.08);
+            --accent: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-glow: rgba(99,102,241,0.4);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --gradient-hero: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            --gradient-card: linear-gradient(145deg, rgba(99,102,241,0.1) 0%, rgba(139,92,246,0.05) 100%);
+            --shadow-glow: 0 0 40px rgba(99,102,241,0.15);
+            --shadow-card: 0 4px 24px rgba(0,0,0,0.4);
+            --radius: 16px;
+            --radius-sm: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+
+        /* Background particles canvas */
+        #particles-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.4;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 16px 24px;
+            background: rgba(10,10,15,0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-glass);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-icon {
+            width: 40px; height: 40px;
+            background: var(--gradient-hero);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--gradient-hero);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--gradient-hero);
+            color: white;
+            box-shadow: 0 4px 20px rgba(99,102,241,0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(99,102,241,0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-glass);
+            color: var(--text-primary);
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 24px 80px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99,102,241,0.15), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 50%, rgba(236,72,153,0.1), transparent);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 32px;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px; height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--success);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.6s ease-out 0.1s both;
+        }
+
+        .hero h1 .gradient-text {
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease-out 0.3s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            justify-content: center;
+            margin-top: 64px;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section */
+        .section {
+            position: relative;
+            z-index: 2;
+            padding: 100px 24px;
+        }
+
+        .section-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(99,102,241,0.1);
+            border: 1px solid rgba(99,102,241,0.2);
+            border-radius: 100px;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Professions Grid */
+        .professions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .profession-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            padding: 32px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .profession-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--gradient-hero);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .profession-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(99,102,241,0.3);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .profession-card:hover::before {
+            opacity: 1;
+        }
+
+        .profession-icon {
+            width: 56px; height: 56px;
+            background: var(--gradient-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+        }
+
+        .profession-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .profession-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .profession-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .profession-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Prompts Section */
+        .prompts-section {
+            background: var(--bg-secondary);
+        }
+
+        .filters {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 100px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 16px 24px 16px 52px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 20px rgba(99,102,241,0.1);
+        }
+
+        .search-box input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-box svg {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .prompts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 20px;
+        }
+
+        .prompt-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .prompt-card:hover {
+            border-color: rgba(99,102,241,0.3);
+            box-shadow: var(--shadow-card);
+        }
+
+        .prompt-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border-glass);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .prompt-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .prompt-tag {
+            padding: 4px 12px;
+            background: rgba(99,102,241,0.1);
+            border: 1px solid rgba(99,102,241,0.2);
+            border-radius: 100px;
+            font-size: 0.7rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .prompt-body {
+            padding: 20px 24px;
+        }
+
+        .prompt-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            background: rgba(0,0,0,0.2);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-glass);
+            max-height: 120px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .prompt-text::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 40px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        }
+
+        .prompt-actions {
+            padding: 16px 24px;
+            border-top: 1px solid var(--border-glass);
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-copy {
+            flex: 1;
+            padding: 10px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-copy:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .btn-copy.copied {
+            background: var(--success);
+            color: white;
+            border-color: var(--success);
+        }
+
+        /* Pricing */
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            padding: 40px 32px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-glow);
+            transform: scale(1.02);
+        }
+
+        .pricing-card.featured::before {
+            content: 'ПОПУЛЯРНЫЙ';
+            position: absolute;
+            top: -1px; left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-hero);
+            color: white;
+            padding: 6px 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .pricing-card .price {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 20px 0;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pricing-card .price span {
+            font-size: 1rem;
+            color: var(--text-muted);
+            -webkit-text-fill-color: var(--text-muted);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 24px 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: 700;
+        }
+
+        .platform-links {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .platform-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .platform-boosty {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+            color: white;
+        }
+
+        .platform-boosty:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(238,90,90,0.3);
+        }
+
+        .platform-gumroad {
+            background: linear-gradient(135deg, #ff90e8, #ff70e0);
+            color: white;
+        }
+
+        .platform-gumroad:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,144,232,0.3);
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--border-glass);
+            padding: 60px 24px 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-glass);
+            padding: 16px 32px;
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-weight: 600;
+            z-index: 9999;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-stats { gap: 24px; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .prompts-grid { grid-template-columns: 1fr; }
+            .professions-grid { grid-template-columns: 1fr; }
+            .pricing-cards { grid-template-columns: 1fr; }
+            .platform-links { flex-direction: column; }
+        }
+
+        /* Reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">⚡</div>
+                PromptHub
+            </a>
+            <div class="nav-links">
+                <a href="#professions" class="nav-link">Профессии</a>
+                <a href="#prompts" class="nav-link">Каталог</a>
+                <a href="#pricing" class="nav-link">Цены</a>
+                <a href="https://boosty.to" target="_blank" class="btn btn-primary btn-sm">Купить на Boosty</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">500+ готовых промптов</div>
+            <h1>
+                AI Промпты для<br>
+                <span class="gradient-text">Любой Профессии</span>
+            </h1>
+            <p class="hero-subtitle">
+                Готовые запросы для ChatGPT, Claude и Gemini. Копируй — вставляй — получай профессиональный результат за секунды.
+            </p>
+            <div class="hero-buttons">
+                <a href="#prompts" class="btn btn-primary">Смотреть каталог</a>
+                <a href="#pricing" class="btn btn-secondary">Купить полный доступ</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">Промптов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">15+</div>
+                    <div class="stat-label">Профессий</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">10ч</div>
+                    <div class="stat-label">Экономии/нед</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professions -->
+    <section class="section" id="professions">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Профессии</div>
+                <h2 class="section-title">Выбери свою нишу</h2>
+                <p class="section-desc">Промпты адаптированы под специфику каждой профессии. Не универсальная вода — а конкретные рабочие инструменты.</p>
+            </div>
+            <div class="professions-grid">
+                <div class="profession-card reveal" data-prof="smm">
+                    <div class="profession-icon">📱</div>
+                    <h3>SMM-менеджер</h3>
+                    <p>Контент-планы, тексты постов, анализ конкурентов, сторис, Reels-сценарии, ответы на комментарии</p>
+                    <div class="profession-meta">
+                        <span>⚡ 45 промптов</span>
+                        <span>🔥 Топ продаж</span>
+                    </div>
+                </div>
+                <div class="profession-card reveal" data-prof="copywriter">
+                    <div class="profession-icon">✍️</div>
+                    <h3>Копирайтер</h3>
+                    <p>Продающие тексты, заголовки, email-рассылки, лендинги, описания товаров, SEO-оптимизация</p>
+                    <div class="profession-meta">
+                        <span>⚡ 52 промпта</span>
+                        <span>⭐ Популярно</span>
+                    </div>
+                </div>
+                <div class="profession-card reveal" data-prof="lawyer">
+                    <div class="profession-icon">⚖️</div>
+                    <h3>Юрист</h3>
+                    <p>Договоры, претензии, юридические заключения, анализ судебной практики, консультации</p>
+                    <div class="profession-meta">
+                        <span>⚡ 38 промптов</span>
+                        <span>💎 Премиум</span>
+                    </div>
+                </div>
+                <div class="profession-card reveal" data-prof="realtor">
+                    <div class="profession-icon">🏠</div>
+                    <h3>Риелтор</h3>
+                    <p>Описания объектов, скрипты звонков, презентации, работа с возражениями, маркетинг</p>
+                    <div class="profession-meta">
+                        <span>⚡ 33 промпта</span>
+                        <span>📈 Рост</span>
+                    </div>
+                </div>
+                <div class="profession-card reveal" data-prof="programmer">
+                    <div class="profession-icon">💻</div>
+                    <h3>Программист</h3>
+                    <p>Генерация кода, рефакторинг, документация, отладка, архитектура, code review</p>
+                    <div class="profession-meta">
+                        <span>⚡ 61 промпт</span>
+                        <span>🔥 Топ продаж</span>
+                    </div>
+                </div>
+                <div class="profession-card reveal" data-prof="marketer">
+                    <div class="profession-icon">📊</div>
+                    <h3>Маркетолог</h3>
+                    <p>Стратегии, анализ ЦА, воронки продаж, рекламные креативы, аналитика, A/B тесты</p>
+                    <div class="profession-meta">
+                        <span>⚡ 47 промптов</span>
+                        <span>⭐ Популярно</span>
+                    </div>
+                </div>
+                <div class="profession-card reveal" data-prof="designer">
+                    <div class="profession-icon">🎨</div>
+                    <h3>Дизайнер</h3>
+                    <p>Брифы, описания для генераторов изображений, UI/UX тексты, презентации портфолио</p>
+                    <div class="profession-meta">
+                        <span>⚡ 29 промптов</span>
+                    </div>
+                </div>
+                <div class="profession-card reveal" data-prof="hr">
+                    <div class="profession-icon">👥</div>
+                    <h3>HR-специалист</h3>
+                    <p>Вакансии, собеседования, адаптация, корпоративные коммуникации, анализ резюме</p>
+                    <div class="profession-meta">
+                        <span>⚡ 35 промптов</span>
+                    </div>
+                </div>
+                <div class="profession-card reveal" data-prof="teacher">
+                    <div class="profession-icon">📚</div>
+                    <h3>Преподаватель</h3>
+                    <p>Планы уроков, тесты, объяснения сложных тем, методички, обратная связь ученикам</p>
+                    <div class="profession-meta">
+                        <span>⚡ 41 промпт</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prompts Catalog -->
+    <section class="section prompts-section" id="prompts">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Каталог</div>
+                <h2 class="section-title">Бесплатные промпты</h2>
+                <p class="section-desc">Попробуй 20+ промптов бесплатно. Полный доступ к 500+ — в платной версии.</p>
+            </div>
+
+            <div class="search-box reveal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <input type="text" id="searchInput" placeholder="Поиск по промптам...">
+            </div>
+
+            <div class="filters reveal">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="smm">SMM</button>
+                <button class="filter-btn" data-filter="copywriter">Копирайтинг</button>
+                <button class="filter-btn" data-filter="lawyer">Юриспруденция</button>
+                <button class="filter-btn" data-filter="realtor">Недвижимость</button>
+                <button class="filter-btn" data-filter="programmer">Разработка</button>
+                <button class="filter-btn" data-filter="marketer">Маркетинг</button>
+            </div>
+
+            <div class="prompts-grid" id="promptsGrid">
+                <!-- Prompts will be populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Цены</div>
+                <h2 class="section-title">Полный доступ ко всем промптам</h2>
+                <p class="section-desc">Разовый платёж. Навсегда. Без подписок и скрытых комиссий.</p>
+            </div>
+
+            <div class="pricing-cards">
+                <div class="pricing-card reveal">
+                    <h3>Одна профессия</h3>
+                    <div class="price">$5 <span>/ разово</span></div>
+                    <ul class="pricing-features">
+                        <li>Все промпты для одной ниши</li>
+                        <li>PDF + online доступ</li>
+                        <li>Обновления 6 месяцев</li>
+                        <li>Поддержка по email</li>
+                    </ul>
+                    <div class="platform-links">
+                        <a href="https://boosty.to" target="_blank" class="platform-link platform-boosty">Boosty — 500 ₽</a>
+                    </div>
+                </div>
+
+                <div class="pricing-card featured reveal">
+                    <h3>Все профессии</h3>
+                    <div class="price">$15 <span>/ разово</span></div>
+                    <ul class="pricing-features">
+                        <li>500+ промптов для всех ниш</li>
+                        <li>PDF + online + мобильная версия</li>
+                        <li>Обновления навсегда</li>
+                        <li>Приоритетная поддержка</li>
+                        <li>Доступ к закрытому чату</li>
+                        <li>Бонус: курс по промпт-инжинирингу</li>
+                    </ul>
+                    <div class="platform-links">
+                        <a href="https://boosty.to" target="_blank" class="platform-link platform-boosty">Boosty — 1500 ₽</a>
+                        <a href="https://gumroad.com" target="_blank" class="platform-link platform-gumroad">Gumroad — $15</a>
+                    </div>
+                </div>
+
+                <div class="pricing-card reveal">
+                    <h3>Для команды</h3>
+                    <div class="price">$49 <span>/ разово</span></div>
+                    <ul class="pricing-features">
+                        <li>Всё из тарифа "Все профессии"</li>
+                        <li>Лицензия на 10 сотрудников</li>
+                        <li>API доступ</li>
+                        <li>Брендированная версия</li>
+                        <li>Персональный менеджер</li>
+                    </ul>
+                    <div class="platform-links">
+                        <a href="https://gumroad.com" target="_blank" class="platform-link platform-gumroad">Gumroad — $49</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#professions">Профессии</a>
+            <a href="#prompts">Каталог</a>
+            <a href="#pricing">Цены</a>
+            <a href="https://boosty.to" target="_blank">Boosty</a>
+            <a href="https://gumroad.com" target="_blank">Gumroad</a>
+        </div>
+        <p>© 2026 PromptHub. Все права защищены. Сделано с ⚡ для профессионалов.</p>
+    </footer>
+
+    <div class="toast" id="toast">Промпт скопирован!</div>
+
+    <script>
+        // Particles
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.3;
+                this.speedY = (Math.random() - 0.5) * 0.3;
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = `rgba(99, 102, 241, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 60; i++) particles.push(new Particle());
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // Prompts Data
+        const promptsData = [
+            { id: 1, title: "Контент-план на месяц", category: "smm", tag: "SMM", text: "Составь контент-план для [название компании] на [месяц]. Ниша: [ниша]. Целевая аудитория: [описание ЦА]. Формат: таблица с датами, темами, типами контента (обучающий/развлекательный/продающий), хештегами и призывами к действию. Учти сезонность и праздники." },
+            { id: 2, title: "Продающий пост", category: "smm", tag: "SMM", text: "Напиши продающий пост для [продукт/услуга] в Instagram. Используй формулу AIDA. Длина: 150-200 слов. Добавь 5 релевантных хештегов и призыв к действию. Тон: дружелюбный, но уверенный." },
+            { id: 3, title: "Сценарий Reels", category: "smm", tag: "SMM", text: "Создай сценарий Reels на тему [тема]. Длина: 15-30 секунд. Структура: хук (первые 3 сек), основная часть, призыв к действию. Добавь описание визуальных элементов и текст для наложения." },
+            { id: 4, title: "Email-рассылка", category: "copywriter", tag: "Копирайтинг", text: "Напиши цепочку из 3 писем для email-рассылки. Тема: [тема]. Целевая аудитория: [аудитория]. Первое письмо — знакомство, второе — ценность, третье — предложение. Каждое письмо не более 200 слов." },
+            { id: 5, title: "Заголовки для лендинга", category: "copywriter", tag: "Копирайтинг", text: "Сгенерируй 10 вариантов заголовков для лендинга [продукт/услуга]. Формулы: вопрос, цифра, как, секрет, без. Каждый заголовок должен содержить сильное обещание и триггер любопытства." },
+            { id: 6, title: "Договор купли-продажи", category: "lawyer", tag: "Юриспруденция", text: "Составь договор купли-продажи [объект] между [продавец] и [покупатель]. Сумма: [сумма]. Условия: [условия]. Включи все существенные условия, force majeure, порядок разрешения споров." },
+            { id: 7, title: "Претензия", category: "lawyer", tag: "Юриспруденция", text: "Напиши претензию от [кто] к [кому] по поводу [проблема]. Требования: [требования]. Срок ответа: 10 дней. Укажи ссылки на законодательство. Тон: твёрдый, но деловой." },
+            { id: 8, title: "Описание квартиры", category: "realtor", tag: "Недвижимость", text: "Напиши продающее описание квартиры: [адрес], [метраж], [комнаты], [этаж]. Особенности: [особенности]. Целевая аудитория: [ЦА]. Используй эмоциональные триггеры и визуальные образы. Длина: 150 слов." },
+            { id: 9, title: "Скрипт холодного звонка", category: "realtor", tag: "Недвижимость", text: "Составь скрипт холодного звонка потенциальному клиенту по недвижимости. Цель: назначить встречу. Включи: приветствие, выявление потребностей, презентацию ценности, работу с возражениями, закрытие." },
+            { id: 10, title: "Генерация API endpoint", category: "programmer", tag: "Разработка", text: "Напиши REST API endpoint на [язык/фреймворк] для [функционал]. Метод: [GET/POST/PUT/DELETE]. Входные параметры: [параметры]. Валидация, обработка ошибок, пример ответа. Добавь комментарии." },
+            { id: 11, title: "Code Review", category: "programmer", tag: "Разработка", text: "Проведи code review следующего кода: [код]. Укажи: баги, уязвимости, проблемы производительности, нарушения best practices. Предложи рефакторинг с объяснением каждого изменения." },
+            { id: 12, title: "Анализ конкурентов", category: "marketer", tag: "Маркетинг", text: "Проведи анализ 3 конкурентов в нише [ниша]: [конкурент 1], [конкурент 2], [конкурент 3]. SWOT-анализ каждого, их УТП, каналы продвижения, ценовая политика. Выводы и рекомендации для нашей стратегии." },
+            { id: 13, title: "Воронка продаж", category: "marketer", tag: "Маркетинг", text: "Спроектируй воронку продаж для [продукт/услуга]. Этапы: осведомлённость, интерес, решение, действие, лояльность. Для каждого этапа: канал, контент, метрика, инструмент автоматизации." },
+            { id: 14, title: "Бриф на дизайн", category: "designer", tag: "Дизайн", text: "Составь дизайн-бриф для [проект]. Целевая аудитория: [ЦА]. Стиль: [стиль]. Обязательные элементы: [элементы]. Добави референсы, технические требования и сроки. Структурируй по разделам." },
+            { id: 15, title: "Вакансия", category: "hr", tag: "HR", text: "Напиши вакансию на позицию [должность]. Компания: [компания]. Требования: [требования]. Обязанности: [обязанности]. Условия: [условия]. Тон: профессиональный, но живой. Добавь о компании и миссии." },
+            { id: 16, title: "План урока", category: "teacher", tag: "Образование", text: "Составь план урока по предмету [предмет] для [класс/курс]. Тема: [тема]. Длительность: [время]. Структура: цель, вступление, основная часть (3 активности), закрепление, домашнее задание, рефлексия." },
+            { id: 17, title: "Stories на день", category: "smm", tag: "SMM", text: "Создай план из 5 stories на сегодня для [бренд]. Тематика: [тема]. Каждый story: тип (опрос/вопрос/слайд/видео), текст, интерактивный элемент. Цель: вовлечение и переход в профиль." },
+            { id: 18, title: "Описание товара", category: "copywriter", tag: "Копирайтинг", text: "Напиши описание товара [товар] для маркетплейса. 3 варианта: короткое (50 слов), среднее (150 слов), длинное (300 слов). SEO-ключи: [ключи]. Акцент на выгодах, а не характеристиках." },
+            { id: 19, title: "SQL запрос", category: "programmer", tag: "Разработка", text: "Напиши SQL запрос для [задача]. Таблицы: [таблицы]. Поля: [поля]. Условия: [условия]. Оптимизируй для производительности. Добавь комментарии и explain план." },
+            { id: 20, title: "Рекламный креатив", category: "marketer", tag: "Маркетинг", text: "Создай 5 вариантов рекламного креатива для [продукт] под [платформа: FB/IG/VK/TG]. Формат: [формат]. Целевая аудитория: [ЦА]. Каждый креатив: заголовок, текст, CTA, визуальная концепция." },
+        ];
+
+        // Render Prompts
+        function renderPrompts(filter = 'all', search = '') {
+            const grid = document.getElementById('promptsGrid');
+            grid.innerHTML = '';
+
+            const filtered = promptsData.filter(p => {
+                const matchFilter = filter === 'all' || p.category === filter;
+                const matchSearch = !search || p.title.toLowerCase().includes(search.toLowerCase()) || p.text.toLowerCase().includes(search.toLowerCase());
+                return matchFilter && matchSearch;
+            });
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'prompt-card reveal visible';
+                card.innerHTML = `
+                    <div class="prompt-header">
+                        <div class="prompt-title">${p.title}</div>
+                        <div class="prompt-tag">${p.tag}</div>
+                    </div>
+                    <div class="prompt-body">
+                        <div class="prompt-text">${p.text}</div>
+                    </div>
+                    <div class="prompt-actions">
+                        <button class="btn-copy" onclick="copyPrompt(${p.id}, this)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            Копировать
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        renderPrompts();
+
+        // Copy Function
+        function copyPrompt(id, btn) {
+            const prompt = promptsData.find(p => p.id === id);
+            navigator.clipboard.writeText(prompt.text).then(() => {
+                btn.classList.add('copied');
+                btn.innerHTML = '✓ Скопировано';
+                showToast('Промпт скопирован в буфер обмена!');
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Копировать`;
+                }, 2000);
+            });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        // Filter Buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderPrompts(btn.dataset.filter, document.getElementById('searchInput').value);
+            });
+        });
+
+        // Search
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+            renderPrompts(activeFilter, e.target.value);
+        });
+
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Profession card click -> filter
+        document.querySelectorAll('.profession-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const prof = card.dataset.prof;
+                document.getElementById('prompts').scrollIntoView({ behavior: 'smooth' });
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                const btn = document.querySelector(`.filter-btn[data-filter="${prof}"]`);
+                if (btn) {
+                    btn.classList.add('active');
+                    renderPrompts(prof, '');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
