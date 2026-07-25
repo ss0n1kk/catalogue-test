@@ -1,0 +1,28 @@
+{
+  "name": "catalogue-test",
+  "version": "1.0.0",
+  "description": "PromptHub - AI Prompts Catalogue with Vercel Speed Insights",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild speed-insights.js --bundle --outfile=dist/speed-insights.bundle.js --format=iife --platform=browser --minify",
+    "dev": "npm run build -- --watch",
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ss0n1kk/catalogue-test.git"
+  },
+  "keywords": ["ai", "prompts", "speed-insights"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ss0n1kk/catalogue-test/issues"
+  },
+  "homepage": "https://github.com/ss0n1kk/catalogue-test#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
+  }
+}
